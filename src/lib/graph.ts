@@ -1,5 +1,5 @@
 import { Client } from "@microsoft/microsoft-graph-client"
-import { Afspraak } from "../types"
+import type { Afspraak } from "../types"
 
 export function getGraphClient(accessToken: string): Client {
     return Client.init({

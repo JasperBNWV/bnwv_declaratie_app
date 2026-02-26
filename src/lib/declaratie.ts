@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid"
-import { Afspraak, DeclaratieItem, Vestiging } from "../types"
+import type { Afspraak, DeclaratieItem, Vestiging } from "../types"
 
 export function afspraakNaarDeclaratie(
     afspraak: Afspraak,

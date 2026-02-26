@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { persist, createJSONStorage } from "zustand/middleware"
-import { DeclaratieItem, Vestiging } from "../types"
+import type { Vestiging, DeclaratieItem } from '../types'
 
 interface InstellingenStore {
     thuisadres: string

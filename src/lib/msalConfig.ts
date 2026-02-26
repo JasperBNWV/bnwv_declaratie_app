@@ -1,4 +1,4 @@
-import { Configuration, PopupRequest } from "@azure/msal-browser"
+import type { Configuration, PopupRequest } from "@azure/msal-browser"
 
 export const msalConfig: Configuration = {
     auth: {
@@ -8,7 +8,6 @@ export const msalConfig: Configuration = {
     },
     cache: {
         cacheLocation: "sessionStorage",   // tab-gebonden, gewist bij sluiten browser
-        storeAuthStateInCookie: false,
     },
 }
 

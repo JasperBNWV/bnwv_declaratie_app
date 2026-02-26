@@ -1,4 +1,4 @@
-import { DeclaratieItem } from "../types"
+import type { DeclaratieItem } from "../types"
 
 export function generateBookmarklet(declaratie: DeclaratieItem): string {
   const doelDatum = declaratie.datum.split("-").reverse().join("-") // "DD-MM-YYYY"

@@ -9,7 +9,7 @@ import { ClipboardButton } from "./ui/ClipboardButton"
 import { generateBookmarklet } from "../lib/bookmarklet"
 import { BookmarkletInstructie } from "./BookmarkletInstructie"
 import { ChevronDown, ChevronRight, Check, X, Pencil } from "lucide-react"
-import { DeclaratieItem } from "../types"
+import type { DeclaratieItem } from "../types"
 
 export function DeclaratieWachtrij() {
   const { items, markeerGedaan, markeerOvergeslagen, bewerk } = useWachtrijStore()
