@@ -1,4 +1,4 @@
-import { type InputHTMLAttributes, forwardRef } from "react"
+import { type InputHTMLAttributes, forwardRef, useId } from "react"
 import { cn } from "../../lib/utils"
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -7,11 +7,14 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-    ({ className, type, label, error, ...props }, ref) => {
+    ({ className, type, label, error, id, ...props }, ref) => {
+        const generatedId = useId()
+        const inputId = id || generatedId
         return (
             <div className="flex flex-col gap-1 w-full">
-                {label && <label className="text-sm font-medium text-ink">{label}</label>}
+                {label && <label htmlFor={inputId} className="text-sm font-medium text-ink">{label}</label>}
                 <input
+                    id={inputId}
                     type={type}
                     className={cn(
                         "flex h-10 w-full rounded-md border border-ink/20 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-not-allowed disabled:opacity-50",

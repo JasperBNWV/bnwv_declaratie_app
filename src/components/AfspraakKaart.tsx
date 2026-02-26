@@ -1,5 +1,5 @@
 import { MapPin, Clock } from "lucide-react"
-import { Afspraak } from "../../types"
+import type { Afspraak } from "../types"
 
 interface AfspraakKaartProps {
   afspraak: Afspraak
