@@ -44,9 +44,9 @@ jobs:
         run: npm run test
 
       - name: Build
-        # Belangrijk: De Vite app is geconfigureerd met base: "/repo-naam/",
-        # Voor lokale test is het \`/\`, maar de CLI build zorgt dat dit goed meekomt uit \`vite.config.ts\` of \`npm run build\` met de juiste VITE_BASE arg als je dat wil overriden.
-        # Check vite.config.ts base setting voor het juiste pad.
+        env:
+          VITE_AZURE_CLIENT_ID: ${{ vars.VITE_AZURE_CLIENT_ID }}
+          VITE_AZURE_TENANT_ID: ${{ vars.VITE_AZURE_TENANT_ID }}
         run: npm run build
 
       - name: Setup Pages
