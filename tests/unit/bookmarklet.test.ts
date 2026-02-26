@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { generateBookmarklet } from '../../src/lib/bookmarklet'
-import { DeclaratieItem } from '../../src/types'
+import type { DeclaratieItem } from '../../src/types'
 
 describe('generateBookmarklet', () => {
     const dummyDeclaratie: DeclaratieItem = {

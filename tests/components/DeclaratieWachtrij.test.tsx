@@ -2,7 +2,7 @@ import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { DeclaratieWachtrij } from '../../src/components/DeclaratieWachtrij'
 import { useWachtrijStore } from '../../src/store/wachtrij'
-import { DeclaratieItem } from '../../src/types'
+import type { DeclaratieItem } from '../../src/types'
 
 // Mock de Wachtrij Store
 vi.mock('../../src/store/wachtrij', () => ({
@@ -27,9 +27,9 @@ const mockDeclaraties: DeclaratieItem[] = [
     },
     {
         id: 'decl-2', afspraakId: 'af-2', datum: '2023-11-02',
-        van: 'Thuisadres 1', naar: 'Klantadres 2', naarVestigingId: null,
+        van: 'Thuisadres 1', naar: 'Klantadres 2', naarVestigingId: '',
         omschrijving: 'Klantbezoek', km: null, retour: false,
-        soort: '3', status: 'wachtend'
+        soort: '3', status: 'te-doen'
     }
 ]
 

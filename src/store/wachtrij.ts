@@ -1,6 +1,6 @@
 import { create } from "zustand"
 import { persist, createJSONStorage } from "zustand/middleware"
-import { DeclaratieItem } from "../types"
+import type { DeclaratieItem } from "../types"
 
 interface WachtrijStore {
     items: DeclaratieItem[]

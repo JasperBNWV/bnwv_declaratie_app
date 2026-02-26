@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { afspraakNaarDeclaratie } from '../../src/lib/declaratie'
-import { Afspraak, DeclaratieItem, Vestiging } from '../../src/types'
+import type { Afspraak, DeclaratieItem, Vestiging } from '../../src/types'
 
 describe('afspraakNaarDeclaratie', () => {
     const mockAfspraak: Afspraak = {
